@@ -455,7 +455,8 @@ function View(element, calendar, viewName) {
 				var segmentCellLast = cellOffsetToCell(segmentCellOffsetLast);
 
 				// view might be RTL, so order by leftmost column
-				var cols = [ segmentCellFirst.col, segmentCellLast.col ].sort();
+				// Fix problems with sort().
+				var cols = [ segmentCellFirst.col, segmentCellLast.col ].sort(function (a , b){return a-b;});
 
 				// Determine if segment's first/last cell is the beginning/end of the date range.
 				// We need to compare "day offset" because "cell offsets" are often ambiguous and

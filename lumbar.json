@@ -23,6 +23,7 @@
         "src/moment-ext.js",
         "src/date-formatting.js",
         "src/basic/MonthView.js",
+	"src/basic/SingleRowMonthView.js",
         "src/basic/BasicWeekView.js",
         "src/basic/BasicDayView.js",
         "src/basic/BasicView.js",
